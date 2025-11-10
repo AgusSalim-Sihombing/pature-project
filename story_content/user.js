@@ -1,0 +1,360 @@
+function ExecuteScript(strId)
+{
+  switch (strId)
+  {
+      case "5X2YLgVt1fN":
+        Script1();
+        break;
+  }
+}
+
+function Script1()
+{
+  var player = GetPlayer();
+
+// Ambil variabel dari Storyline (sama seperti kode Anda)
+var subtopiks = [
+    {
+        subtopik: "penjumlahan",
+        jawaban: [
+            player.GetVar("TextEntry4") || "",
+            player.GetVar("TextEntry3") || "",
+            player.GetVar("TextEntry5") || "",
+            player.GetVar("TextEntry6") || "",
+            player.GetVar("TextEntry7") || ""
+        ],
+        kunci_jawaban: ["42", "78", "63", "82", "62"]
+    },
+    {
+        subtopik: "pengurangan",
+        jawaban: [
+            player.GetVar("TextEntry9") || "",
+            player.GetVar("TextEntry8") || "",
+            player.GetVar("TextEntry10") || "",
+            player.GetVar("TextEntry11") || "",
+            player.GetVar("TextEntry12") || ""
+        ],
+        kunci_jawaban: ["28", "9", "31", "17", "23"]
+    },
+    {
+        subtopik: "perkalian",
+        jawaban: [
+            player.GetVar("TextEntry13") || "",
+            player.GetVar("TextEntry14") || "",
+            player.GetVar("TextEntry15") || "",
+            player.GetVar("TextEntry16") || "",
+            player.GetVar("TextEntry17") || ""
+        ],
+        kunci_jawaban: ["72", "96", "91", "176", "54"]
+    },
+    {
+        subtopik: "pembagian",
+        jawaban: [
+            player.GetVar("TextEntry22") || "",
+            player.GetVar("TextEntry19") || "",
+            player.GetVar("TextEntry23") || "",
+            player.GetVar("TextEntry24") || "",
+            player.GetVar("TextEntry25") || ""
+        ],
+        kunci_jawaban: ["7", "9", "4", "13", "9"]
+    },
+    {
+        subtopik: "operasi_campuran",
+        jawaban: [
+            player.GetVar("TextEntry26") || "",
+            player.GetVar("TextEntry27") || "",
+            player.GetVar("TextEntry28") || "",
+            player.GetVar("TextEntry29") || "",
+            player.GetVar("TextEntry30") || ""
+        ],
+        kunci_jawaban: ["-5", "21", "8", "15", "16"]
+    },
+    {
+        subtopik: "kpk",
+        jawaban: [
+            player.GetVar("TextEntry31") || "",
+            player.GetVar("TextEntry34") || "",
+            player.GetVar("TextEntry35") || "",
+            player.GetVar("TextEntry36") || "",
+            player.GetVar("TextEntry37") || ""
+        ],
+        kunci_jawaban: ["12", "12", "30", "24", "24"]
+    },
+    {
+        subtopik: "fpb",
+        jawaban: [
+            player.GetVar("TextEntry38") || "",
+            player.GetVar("TextEntry39") || "",
+            player.GetVar("TextEntry40") || "",
+            player.GetVar("TextEntry41") || "",
+            player.GetVar("TextEntry42") || ""
+        ],
+        kunci_jawaban: ["5", "8", "9", "12", "10"]
+    },
+    {
+        subtopik: "penjumlahan_pecahan",
+        jawaban: [
+            player.GetVar("TextEntry44") || "",
+            player.GetVar("TextEntry45") || "",
+            player.GetVar("TextEntry46") || "",
+            player.GetVar("TextEntry47") || "",
+            player.GetVar("TextEntry49") || ""
+        ],
+        kunci_jawaban: ["3/4", "13/15", "1/2", "13/24", "13/12"]
+    },
+    {
+        subtopik: "pengurangan_pecahan",
+        jawaban: [
+            player.GetVar("TextEntry50") || "",
+            player.GetVar("TextEntry51") || "",
+            player.GetVar("TextEntry52") || "",
+            player.GetVar("TextEntry53") || "",
+            player.GetVar("TextEntry54") || ""
+        ],
+        kunci_jawaban: ["1/4", "1/6", "11/8", "1/2", "7/12"]
+    },
+    {
+        subtopik: "pembagian_pecahan",
+        jawaban: [
+            player.GetVar("TextEntry60") || "",
+            player.GetVar("TextEntry61") || "",
+            player.GetVar("TextEntry62") || "",
+            player.GetVar("TextEntry63") || "",
+            player.GetVar("TextEntry64") || ""
+        ],
+        kunci_jawaban: ["2", "3/2", "4/3", "8", "6"]
+    },
+    {
+        subtopik: "mengurutkan",
+        jawaban: [
+            player.GetVar("TextEntry66") || "",
+            player.GetVar("TextEntry67") || "",
+            player.GetVar("TextEntry68") || "",
+            player.GetVar("TextEntry69") || "",
+            player.GetVar("TextEntry70") || ""
+        ],
+        kunci_jawaban: ["a", "a", "b", "a", "a"]
+    },
+    {
+        subtopik: "pembagian_desimal",
+        jawaban: [
+            player.GetVar("TextEntry108") || "",
+            player.GetVar("TextEntry110") || "",
+            player.GetVar("TextEntry111") || "",
+            player.GetVar("TextEntry114") || "",
+            player.GetVar("TextEntry115") || ""
+        ],
+        kunci_jawaban: ["0.3", "0.4", "0.009", "0.3", "0.6"]
+    },
+    {
+        subtopik: "perkalian_desimal",
+        jawaban: [
+            player.GetVar("TextEntry107") || "",
+            player.GetVar("TextEntry98") || "",
+            player.GetVar("TextEntry113") || "",
+            player.GetVar("TextEntry102") || "",
+            player.GetVar("TextEntry105") || ""
+        ],
+        kunci_jawaban: ["0.2", "2.4", "0.009", "3", "3"]
+    },
+    {
+        subtopik: "pengurangan_desimal",
+        jawaban: [
+            player.GetVar("TextEntry106") || "",
+            player.GetVar("TextEntry97") || "",
+            player.GetVar("TextEntry112") || "",
+            player.GetVar("TextEntry101") || "",
+            player.GetVar("TextEntry104") || ""
+        ],
+        kunci_jawaban: ["0.5", "1", "0.7", "0.5", "1.8"]
+    },
+    {
+        subtopik: "penjumlahan_desimal",
+        jawaban: [
+            player.GetVar("TextEntry109") || "",
+            player.GetVar("TextEntry96") || "",
+            player.GetVar("TextEntry99") || "",
+            player.GetVar("TextEntry100") || "",
+            player.GetVar("TextEntry103") || ""
+        ],
+        kunci_jawaban: ["0.5", "0.2", "3.5", "1", "1.8"]
+    },
+    {
+        subtopik: "pola_bilangan",
+        jawaban: [
+            player.GetVar("TextEntry121") || "",
+            player.GetVar("TextEntry116") || "",
+            player.GetVar("TextEntry117") || "",
+            player.GetVar("TextEntry119") || "",
+            player.GetVar("TextEntry118") || ""
+        ],
+        kunci_jawaban: ["10", "16", "34", "22", "9"]
+    },
+    {
+        subtopik: "operasi_aljabar",
+        jawaban: [
+            player.GetVar("TextEntry120") || "",
+            player.GetVar("TextEntry123") || "",
+            player.GetVar("TextEntry122") || "",
+            player.GetVar("TextEntry124") || "",
+            player.GetVar("TextEntry125") || ""
+        ],
+        kunci_jawaban: ["x+5", "5", "9", "-1", "30"]
+    },
+    {
+        subtopik: "panjang",
+        jawaban: [
+            player.GetVar("TextEntry126") || "",
+            player.GetVar("TextEntry127") || "",
+            player.GetVar("TextEntry128") || "",
+            player.GetVar("TextEntry129") || "",
+            player.GetVar("TextEntry130") || ""
+        ],
+        kunci_jawaban: ["3.5", "125", "350", "1.2", "500"]
+    },
+    {
+        subtopik: "berat",
+        jawaban: [
+            player.GetVar("TextEntry131") || "",
+            player.GetVar("TextEntry132") || "",
+            player.GetVar("TextEntry133") || "",
+            player.GetVar("TextEntry138") || "",
+            player.GetVar("TextEntry134") || ""
+        ],
+        kunci_jawaban: ["2000", "1500", "0.25", "5", "4"]
+    },
+    {
+        subtopik: "waktu",
+        jawaban: [
+            player.GetVar("TextEntry135") || "",
+            player.GetVar("TextEntry136") || "",
+            player.GetVar("TextEntry137") || "",
+            player.GetVar("TextEntry140") || "",
+            player.GetVar("TextEntry141") || ""
+        ],
+        kunci_jawaban: ["120", "2", "2.25", "210", "1.5"]
+    },
+    {
+        subtopik: "sudut",
+        jawaban: [
+            player.GetVar("TextEntry142") || "",
+            player.GetVar("TextEntry143") || "",
+            player.GetVar("TextEntry144") || "",
+            player.GetVar("TextEntry139") || "",
+            player.GetVar("TextEntry145") || ""
+        ],
+        kunci_jawaban: ["90", "180", "360", "60", "59"]
+    },
+    {
+        subtopik: "keliling_bangun_datar",
+        jawaban: [
+            player.GetVar("TextEntry146") || "",
+            player.GetVar("TextEntry147") || "",
+            player.GetVar("TextEntry148") || "",
+            player.GetVar("TextEntry149") || "",
+            player.GetVar("TextEntry150") || ""
+        ],
+        kunci_jawaban: ["8", "9", "12", "40", "34"]
+    },
+    {
+        subtopik: "luas_bangun_datar",
+        jawaban: [
+            player.GetVar("TextEntry151") || "",
+            player.GetVar("TextEntry152") || "",
+            player.GetVar("TextEntry153") || "",
+            player.GetVar("TextEntry154") || "",
+            player.GetVar("TextEntry155") || ""
+        ],
+        kunci_jawaban: ["4", "6", "4", "72", "15"]
+    },
+    {
+        subtopik: "volume_bangun_ruang",
+        jawaban: [
+            player.GetVar("TextEntry157") || "",
+            player.GetVar("TextEntry162") || "",
+            player.GetVar("TextEntry163") || "",
+            player.GetVar("TextEntry164") || "",
+            player.GetVar("TextEntry165") || ""
+        ],
+        kunci_jawaban: ["8", "6", "27", "8", "10"]
+    },
+    {
+        subtopik: "luas_permukaan_bangun_ruang",
+        jawaban: [
+            player.GetVar("TextEntry156") || "",
+            player.GetVar("TextEntry158") || "",
+            player.GetVar("TextEntry159") || "",
+            player.GetVar("TextEntry160") || "",
+            player.GetVar("TextEntry161") || ""
+        ],
+        kunci_jawaban: ["24", "22", "54", "24", "96"]
+    },
+    {
+        subtopik: "data",
+        jawaban: [
+            player.GetVar("TextEntry166") || "",
+            player.GetVar("TextEntry167") || "",
+            player.GetVar("TextEntry168") || "",
+            player.GetVar("TextEntry170") || "",
+            player.GetVar("TextEntry171") || ""
+        ],
+        kunci_jawaban: ["20", "140", "85", "33", "kamis"]
+    },
+    {
+        subtopik: "peluang",
+        jawaban: [
+            player.GetVar("TextEntry174") || "",
+            player.GetVar("TextEntry175") || "",
+            player.GetVar("TextEntry176") || "",
+            player.GetVar("TextEntry177") || "",
+            player.GetVar("TextEntry178") || ""
+        ],
+        kunci_jawaban: ["coklat", "mint", "hitam", "a", "kuning"]
+    }
+];
+
+var student_id = player.GetVar("namalengkap") || "ANONIM";
+
+// Hapus filter dan validasi kosong - kirim semua sub-topik
+// Jawaban kosong ("") akan dianggap salah di back-end (skor 0)
+
+// Debug payload
+console.log("Payload dikirim ke backend:", { student_id, subtopiks });
+
+fetch('https://pature-project-7e90b5e8ea2d.herokuapp.com/submit-answers', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ student_id, subtopiks })
+})
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(err => {
+                throw new Error(`Network response was not ok: ${response.status}, ${JSON.stringify(err)}`);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        player.SetVar("SkorPerSubTopik", JSON.stringify(data.skor_per_subtopik));
+        var skorFormatted = "";
+        for (var key in data.skor_per_subtopik) {
+            skorFormatted += key + " : " + data.skor_per_subtopik[key] + ", ";
+        }
+        skorFormatted = skorFormatted.slice(0, -2);
+
+        player.SetVar("SkorFormatted", skorFormatted);
+        player.SetVar("PrediksiKelemahan", data.prediksi_kelemahan_utama);
+        player.SetVar("SubTopikLemah", data.subtopik_lemah.join(', ') || "Tidak ada");
+        player.SetVar("Feedback", data.feedback);
+        alert(`Halo ${student_id}, berdasarkan klasifikasi Machine Learning:\nKelemahan utama: ${data.prediksi_kelemahan_utama}\nSub-topik lemah lainnya: ${data.subtopik_lemah.join(', ') || "Tidak ada"}`);
+        console.log('Hasil dari backend:', data);
+    })
+    .catch(error => {
+        console.error('Error saat fetch:', error);
+        player.SetVar("Feedback", `Error: ${error.message}`);
+        alert(`Terjadi kesalahan: ${error.message}`);
+    });
+}
+
